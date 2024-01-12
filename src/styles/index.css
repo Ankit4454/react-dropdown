@@ -1,8 +1,16 @@
 :root{
   --body-bg: #fff;
-  --body-bg-dark: #121212;
   --text-color: black;
-  --text-color-dark: #fff;
+  --bg-red: red;
+  --bg-green: green;
+  --bg-blue: blue;
+  --bg-yellow: yellow;
+  --bg-purple: purple;
+  --bg-orange: orange;
+  --bg-pink: pink;
+  --bg-brown: brown;
+  --bg-teal: teal;
+  --bg-cyan: cyan;
   --toggle-size: 2rem;
   --container-width: 3em;
   --container-height: 1.33em;
@@ -40,8 +48,8 @@ body {
 }
 
 .darkMode{
-  background: var(--body-bg-dark);
-  color: var(--text-color-dark);
+  --body-bg: #121212;
+  --text-color: #fff;
 }
 
 code {
@@ -236,3 +244,54 @@ code {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
+.dropdownDiv{
+  display: flex;
+  flex-direction: column;
+}
+
+#dropdown {
+  position: relative;
+  width: 15em;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  margin-top: 1rem;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+}
+
+.dropdownDiv select {
+  transition: height 0.5s ease-in-out;
+}
+
+.dropdownDiv.open select {
+  height: 16em;
+}
+
+#dropdown::-webkit-scrollbar {
+  display: none;
+}
+
+#dropdown {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#dropdown option{
+  padding: 0.5rem;
+}
+
+.bg-red { background: var(--bg-red); }
+.bg-green { background: var(--bg-green); }
+.bg-blue { background: var(--bg-blue); }
+.bg-yellow { background: var(--bg-yellow); }
+.bg-purple { background: var(--bg-purple); }
+.bg-orange { background: var(--bg-orange); }
+.bg-pink { background: var(--bg-pink); }
+.bg-brown { background: var(--bg-brown); }
+.bg-teal { background: var(--bg-teal); }
+.bg-cyan { background: var(--bg-cyan); }
